@@ -1,8 +1,9 @@
 
 
 {% for result in results %}
-	<a href="{% url 'detail' result.id %}">{{ result.name }}</a>
-		<br>
+	<a href="{% url 'detail' result.id %}">{{ result.name }}<br></a>
+
+
 
 
 {% endfor %}

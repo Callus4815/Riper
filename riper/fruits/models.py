@@ -8,7 +8,7 @@ class Fruit(models.Model):
 	color = models.CharField(max_length=25)
 	type = models.CharField(max_length=25)
 	description = models.CharField(max_length=255)
-	url = models.CharField(max_length=50, default="none", validators=[URLValidator()])
+	url = models.CharField(max_length=50, default="Wiki-page") #validators=[URLValidator()])
 
 
 	def __str__(self):
