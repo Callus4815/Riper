@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.views.generic import ListView, View
+from django.views.generic import ListView, View, DetailView
 from .models import Fruit
 
 
@@ -22,3 +22,7 @@ def search_bar(request):
     else:
         results = Fruit.objects.all()
     return render(request, 'fruits/search_results.html' , {'results': results})
+
+class FruitDetail(DetailView):
+	model = Fruit
+	template_name = "fruits/detail.html"
